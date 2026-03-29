@@ -62,32 +62,32 @@ export default function Contact() {
             <h3 className="text-2xl font-bold font-heading">Get In Touch</h3>
             
             <a href="mailto:thanaykrishna2255@gmail.com" className="glass-panel p-6 rounded-2xl flex items-center gap-6 group hover:-translate-y-1 transition-transform cursor-pointer">
-              <div className="w-14 h-14 rounded-full bg-[var(--accent-color)]/10 text-[var(--accent-color)] flex items-center justify-center group-hover:scale-110 group-hover:bg-[var(--accent-color)] group-hover:text-white dark:group-hover:text-black transition-all">
+              <div className="shrink-0 w-14 h-14 rounded-full bg-[var(--accent-color)]/10 text-[var(--accent-color)] flex items-center justify-center group-hover:scale-110 group-hover:bg-[var(--accent-color)] group-hover:text-[var(--bg-primary)] transition-all">
                 <Mail size={24} />
               </div>
-              <div>
+              <div className="min-w-0 overflow-hidden">
                 <div className="text-sm font-semibold text-[var(--text-secondary)] mb-1 uppercase tracking-wider">Email</div>
-                <div className="text-lg font-medium text-[var(--text-primary)]">thanaykrishna2255@gmail.com</div>
+                <div className="text-lg font-medium text-[var(--text-primary)] truncate">thanaykrishna2255@gmail.com</div>
               </div>
             </a>
 
-            <a href="https://linkedin.com/in/placeholder" target="_blank" rel="noopener noreferrer" className="glass-panel p-6 rounded-2xl flex items-center gap-6 group hover:-translate-y-1 transition-transform cursor-pointer">
-              <div className="w-14 h-14 rounded-full bg-[var(--highlight-color)]/10 text-[var(--highlight-color)] flex items-center justify-center group-hover:scale-110 group-hover:bg-[var(--highlight-color)] group-hover:text-white dark:group-hover:text-black transition-all">
+            <a href="https://www.linkedin.com/in/thanay-krishna-c-u-a1b67831b/" target="_blank" rel="noopener noreferrer" className="glass-panel p-6 rounded-2xl flex items-center gap-6 group hover:-translate-y-1 transition-transform cursor-pointer">
+              <div className="shrink-0 w-14 h-14 rounded-full bg-[var(--highlight-color)]/10 text-[var(--highlight-color)] flex items-center justify-center group-hover:scale-110 group-hover:bg-[var(--highlight-color)] group-hover:text-[var(--bg-primary)] transition-all">
                 <Linkedin size={24} />
               </div>
-              <div>
+              <div className="min-w-0 overflow-hidden">
                 <div className="text-sm font-semibold text-[var(--text-secondary)] mb-1 uppercase tracking-wider">LinkedIn</div>
-                <div className="text-lg font-medium text-[var(--text-primary)]">linkedin.com/in/thanaykrishna</div>
+                <div className="text-lg font-medium text-[var(--text-primary)] truncate">thanay-krishna-c-u...</div>
               </div>
             </a>
 
-            <a href="https://github.com/placeholder" target="_blank" rel="noopener noreferrer" className="glass-panel p-6 rounded-2xl flex items-center gap-6 group hover:-translate-y-1 transition-transform cursor-pointer">
-              <div className="w-14 h-14 rounded-full bg-[var(--text-primary)]/5 text-[var(--text-primary)] flex items-center justify-center group-hover:scale-110 group-hover:bg-[var(--text-primary)] group-hover:text-[var(--bg-primary)] transition-all">
+            <a href="https://github.com/THANAY-KRISHNA" target="_blank" rel="noopener noreferrer" className="glass-panel p-6 rounded-2xl flex items-center gap-6 group hover:-translate-y-1 transition-transform cursor-pointer">
+              <div className="shrink-0 w-14 h-14 rounded-full bg-[var(--text-primary)]/5 text-[var(--text-primary)] flex items-center justify-center group-hover:scale-110 group-hover:bg-[var(--text-primary)] group-hover:text-[var(--bg-primary)] transition-all">
                 <Github size={24} />
               </div>
-              <div>
+              <div className="min-w-0 overflow-hidden">
                 <div className="text-sm font-semibold text-[var(--text-secondary)] mb-1 uppercase tracking-wider">GitHub</div>
-                <div className="text-lg font-medium text-[var(--text-primary)]">github.com/thanaykrishna</div>
+                <div className="text-lg font-medium text-[var(--text-primary)] truncate">github.com/THANAY-KRISHNA</div>
               </div>
             </a>
           </motion.div>
