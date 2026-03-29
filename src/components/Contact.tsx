@@ -61,13 +61,13 @@ export default function Contact() {
           >
             <h3 className="text-2xl font-bold font-heading">Get In Touch</h3>
             
-            <a href="mailto:thanaykrishnacu@example.com" className="glass-panel p-6 rounded-2xl flex items-center gap-6 group hover:-translate-y-1 transition-transform cursor-pointer">
+            <a href="mailto:thanaykrishna2255@gmail.com" className="glass-panel p-6 rounded-2xl flex items-center gap-6 group hover:-translate-y-1 transition-transform cursor-pointer">
               <div className="w-14 h-14 rounded-full bg-[var(--accent-color)]/10 text-[var(--accent-color)] flex items-center justify-center group-hover:scale-110 group-hover:bg-[var(--accent-color)] group-hover:text-white dark:group-hover:text-black transition-all">
                 <Mail size={24} />
               </div>
               <div>
                 <div className="text-sm font-semibold text-[var(--text-secondary)] mb-1 uppercase tracking-wider">Email</div>
-                <div className="text-lg font-medium text-[var(--text-primary)]">thanay@example.com</div>
+                <div className="text-lg font-medium text-[var(--text-primary)]">thanaykrishna2255@gmail.com</div>
               </div>
             </a>
 
