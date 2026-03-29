@@ -96,7 +96,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
           className="flex flex-col sm:flex-row gap-4 items-center justify-center"
         >
-          <a href="#projects" className="group relative px-8 py-3.5 bg-[var(--accent-color)] text-white hover:text-white dark:text-black dark:hover:text-black rounded-lg font-semibold overflow-hidden transition-all focus:outline-none flex items-center gap-2 shadow-lg shadow-[var(--accent-color)]/20 hover:shadow-[var(--accent-color)]/40 hover:-translate-y-1">
+          <a href="#projects" className="group relative px-8 py-3.5 bg-[var(--accent-color)] text-[var(--bg-primary)] rounded-lg font-semibold overflow-hidden transition-all focus:outline-none flex items-center gap-2 shadow-lg shadow-[var(--accent-color)]/20 hover:shadow-[var(--accent-color)]/40 hover:-translate-y-1">
             <span className="relative z-10">View Projects</span>
             <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform" />
           </a>

@@ -144,7 +144,7 @@ export default function Contact() {
               <button 
                 type="submit" 
                 disabled={status === 'loading'}
-                className="mt-2 w-full bg-[var(--accent-color)] hover:bg-opacity-90 text-white dark:text-black font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all disabled:opacity-70 disabled:cursor-not-allowed group shadow-lg shadow-[var(--accent-color)]/20 hover:-translate-y-1"
+                className="mt-2 w-full bg-[var(--accent-color)] hover:bg-opacity-90 text-[var(--bg-primary)] font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all disabled:opacity-70 disabled:cursor-not-allowed group shadow-lg shadow-[var(--accent-color)]/20 hover:-translate-y-1"
               >
                 {status === 'loading' ? (
                   <Loader2 size={20} className="animate-spin" />
