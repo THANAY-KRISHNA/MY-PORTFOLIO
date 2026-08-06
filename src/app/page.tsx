@@ -37,12 +37,6 @@ export default function Home() {
         <Achievements />
         <Contact />
       </div>
-
-      <footer className="py-8 text-center border-t border-[var(--border-color)]">
-        <p className="text-[var(--text-secondary)] text-sm font-medium">
-          © {new Date().getFullYear()} Thanay Krishna C U. Designed & Built for Impact.
-        </p>
-      </footer>
     </main>
   );
 }
