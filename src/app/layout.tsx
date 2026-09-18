@@ -20,30 +20,46 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://thanay.vercel.app";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://thanaykrishna.dev"),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Thanay Krishna C U | AI & Data Science Engineer Portfolio",
+    default: "Thanay Krishna C U (Thanay) | AI & Data Science Engineer Portfolio",
     template: "%s | Thanay Krishna C U"
   },
-  description: "Official portfolio of Thanay Krishna C U – BTech Computer Science & Data Science Engineer, AI & IoT Developer specializing in intelligent systems, machine learning, and hardware-software integration.",
+  description: "Official portfolio of Thanay Krishna C U (Thanay) – BTech Computer Science & Data Science Engineer, AI & IoT Developer specializing in intelligent systems, machine learning, and hardware-software integration.",
+  applicationName: "Thanay Krishna C U Portfolio",
   keywords: [
+    "THANAY KRISHNA C U",
     "Thanay Krishna C U",
+    "THANAY",
+    "Thanay",
+    "thanay",
+    "thanay krishna c u",
     "Thanay Krishna",
-    "Portfolio",
-    "Data Science Engineer",
-    "AI Developer",
-    "IoT Engineer",
-    "Computer Science",
-    "IES College of Engineering",
-    "Thrissur",
+    "thanay krishna",
+    "Thanay C U",
+    "thanay cu",
+    "Thanay Portfolio",
+    "Thanay Krishna Portfolio",
+    "Thanay Website",
+    "Thanay Krishna Website",
+    "Thanay Engineer",
+    "Thanay Data Science",
+    "Thanay AI Developer",
+    "Thanay IoT",
+    "Thanay IES College of Engineering",
+    "Thanay Krishna Thrissur",
+    "Thanay Kerala",
+    "AI Engineer Thrissur",
+    "Data Science Engineer Kerala",
+    "Machine Learning Engineer",
     "Full Stack Developer",
-    "Machine Learning",
-    "Python",
-    "React",
-    "Next.js"
+    "Python Developer",
+    "Next.js Developer"
   ],
-  authors: [{ name: "Thanay Krishna C U", url: "https://github.com/THANAY-KRISHNA" }],
+  authors: [{ name: "Thanay Krishna C U", url: siteUrl }],
   creator: "Thanay Krishna C U",
   publisher: "Thanay Krishna C U",
   formatDetection: {
@@ -63,22 +79,29 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Thanay Krishna C U | AI & Data Science Engineer Portfolio",
-    description: "Building AI & IoT solutions that create real-world impact. Explore projects, skills, achievements, and experience.",
-    url: "https://thanaykrishna.dev",
-    siteName: "Thanay Krishna C U Portfolio",
+    title: "Thanay Krishna C U (Thanay) | AI & Data Science Engineer Portfolio",
+    description: "Official portfolio of Thanay Krishna C U (Thanay). Building AI & IoT solutions that create real-world impact. Explore projects, skills, achievements, and experience.",
+    url: siteUrl,
+    siteName: "Thanay Krishna C U (Thanay)",
     locale: "en_US",
-    type: "website",
+    type: "profile",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Thanay Krishna C U | AI & Data Science Engineer",
-    description: "Building AI & IoT solutions that create real-world impact.",
+    title: "Thanay Krishna C U (Thanay) | AI & Data Science Engineer",
+    description: "Official portfolio of Thanay Krishna C U (Thanay) – Building AI & IoT solutions that create real-world impact.",
     creator: "@ThanayKrishna",
   },
   alternates: {
-    canonical: "https://thanaykrishna.dev",
+    canonical: siteUrl,
   },
+  icons: {
+    icon: "/favicon.ico",
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
+  category: "technology",
 };
 
 const jsonLd = {
@@ -86,15 +109,34 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://thanaykrishna.dev/#person",
+      "@id": `${siteUrl}/#person`,
       "name": "Thanay Krishna C U",
+      "alternateName": [
+        "Thanay",
+        "THANAY",
+        "thanay",
+        "Thanay Krishna",
+        "THANAY KRISHNA C U",
+        "Thanay C U",
+        "thanay krishna"
+      ],
+      "givenName": "Thanay",
+      "additionalName": "Krishna",
+      "familyName": "C U",
       "jobTitle": "AI & Data Science Engineer",
-      "description": "BTech student in Computer Science with Data Science Engineering at IES College of Engineering, Thrissur.",
-      "url": "https://thanaykrishna.dev",
+      "description": "Thanay Krishna C U (Thanay) is an AI & Data Science Engineer, IoT Developer, and BTech student in Computer Science with Data Science Engineering at IES College of Engineering, Thrissur.",
+      "url": siteUrl,
       "sameAs": [
         "https://github.com/THANAY-KRISHNA",
         "https://www.linkedin.com/in/thanay-krishna-c-u-a1b67831b/"
       ],
+      "email": "mailto:thanaykrishna2255@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Thrissur",
+        "addressRegion": "Kerala",
+        "addressCountry": "India"
+      },
       "alumniOf": {
         "@type": "EducationalOrganization",
         "name": "IES College of Engineering, Thrissur"
@@ -112,14 +154,33 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://thanaykrishna.dev/#website",
-      "url": "https://thanaykrishna.dev",
+      "@id": `${siteUrl}/#website`,
+      "url": siteUrl,
       "name": "Thanay Krishna C U Portfolio",
-      "description": "Portfolio of Thanay Krishna C U",
+      "alternateName": [
+        "Thanay Portfolio",
+        "Thanay Krishna Website",
+        "THANAY KRISHNA C U",
+        "Thanay",
+        "THANAY"
+      ],
+      "description": "Official website and portfolio of Thanay Krishna C U (Thanay).",
       "publisher": {
-        "@id": "https://thanaykrishna.dev/#person"
+        "@id": `${siteUrl}/#person`
       },
       "inLanguage": "en-US"
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": `${siteUrl}/#profilepage`,
+      "url": siteUrl,
+      "name": "Thanay Krishna C U (Thanay) - Profile & Portfolio",
+      "isPartOf": {
+        "@id": `${siteUrl}/#website`
+      },
+      "mainEntity": {
+        "@id": `${siteUrl}/#person`
+      }
     }
   ]
 };
