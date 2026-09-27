@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
+import { siteConfig } from '@/lib/seo';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -22,7 +23,7 @@ export default function Footer() {
 
         <div className="flex items-center gap-6">
           <a
-            href="https://github.com/THANAY-KRISHNA"
+            href={siteConfig.social.github}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Thanay Krishna C U on GitHub"
@@ -31,7 +32,7 @@ export default function Footer() {
             <Github size={20} />
           </a>
           <a
-            href="https://www.linkedin.com/in/thanay-krishna-c-u-a1b67831b/"
+            href={siteConfig.social.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Thanay Krishna C U on LinkedIn"
@@ -40,7 +41,7 @@ export default function Footer() {
             <Linkedin size={20} />
           </a>
           <a
-            href="mailto:thanaykrishna2255@gmail.com"
+            href={`mailto:${siteConfig.email}`}
             aria-label="Send email to Thanay Krishna C U"
             className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors p-2 rounded-lg hover:bg-[var(--border-color)]/30"
           >
@@ -57,8 +58,19 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 mt-8 pt-6 border-t border-[var(--border-color)]/50 text-center text-xs text-[var(--text-secondary)]">
-        <p>© {new Date().getFullYear()} Thanay Krishna C U. All rights reserved.</p>
+      <div className="max-w-7xl mx-auto px-6 mt-8 pt-6 border-t border-[var(--border-color)]/50 flex items-center justify-center text-xs text-[var(--text-secondary)] text-center">
+        <p className="font-medium tracking-wide">
+          Developed by:{' '}
+          <a
+            href={siteConfig.social.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Thanay Krishna C U on LinkedIn"
+            className="text-gradient font-bold tracking-wider hover:opacity-80 transition-opacity underline-offset-4 hover:underline inline-block"
+          >
+            THANAY KRISHNA C U
+          </a>
+        </p>
       </div>
     </footer>
   );

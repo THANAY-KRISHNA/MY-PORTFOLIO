@@ -74,12 +74,6 @@ export default function Hero() {
           <h2 className="text-xl md:text-3xl font-medium text-[var(--text-primary)] relative">
             <span className="sr-only">{sentence}</span>
             <span aria-hidden="true">{displayText}</span>
-            <motion.span 
-              aria-hidden="true"
-              animate={{ opacity: [0, 1, 0] }} 
-              transition={{ repeat: Infinity, duration: 0.8 }}
-              className="absolute -right-3 top-0 bottom-0 w-[2px] bg-[var(--accent-color)]"
-            />
           </h2>
         </motion.div>
 
