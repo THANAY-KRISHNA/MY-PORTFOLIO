@@ -47,7 +47,7 @@ export default function About() {
             className="lg:col-span-7 space-y-6 text-base md:text-lg text-[var(--text-secondary)] leading-relaxed"
           >
             <motion.p variants={itemVariants}>
-              I am currently pursuing a BTech in <strong className="text-[var(--text-primary)] font-medium">Computer Science with Data Science Engineering</strong> at IES College of Engineering, Thrissur.
+              I am <strong className="text-[var(--text-primary)] font-medium">Thanay Krishna C U</strong>, currently pursuing a BTech in <strong className="text-[var(--text-primary)] font-medium">Computer Science with Data Science Engineering</strong> at IES College of Engineering, Thrissur.
             </motion.p>
             <motion.p variants={itemVariants}>
               I am passionate about building impactful solutions at the intersection of <strong className="text-[var(--text-primary)] font-medium">Artificial Intelligence, IoT, and Data Science</strong>. I enjoy transforming ideas into real-world systems that solve meaningful problems.
