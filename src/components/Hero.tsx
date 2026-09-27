@@ -72,8 +72,10 @@ export default function Hero() {
           className="h-[80px] sm:h-[60px] md:h-[80px] flex items-center justify-center mb-6"
         >
           <h2 className="text-xl md:text-3xl font-medium text-[var(--text-primary)] relative">
-            {displayText}
+            <span className="sr-only">{sentence}</span>
+            <span aria-hidden="true">{displayText}</span>
             <motion.span 
+              aria-hidden="true"
               animate={{ opacity: [0, 1, 0] }} 
               transition={{ repeat: Infinity, duration: 0.8 }}
               className="absolute -right-3 top-0 bottom-0 w-[2px] bg-[var(--accent-color)]"
@@ -112,6 +114,15 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer flex flex-col items-center gap-2 text-[var(--text-secondary)] hover:text-[var(--accent-color)] transition-colors"
+        role="button"
+        tabIndex={0}
+        aria-label="Scroll down to about section"
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
+          }
+        }}
         onClick={() => {
           document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
         }}

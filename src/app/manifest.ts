@@ -1,10 +1,11 @@
 import { MetadataRoute } from 'next';
+import { siteConfig } from '@/lib/seo';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Thanay Krishna C U | AI & Data Science Engineer',
-    short_name: 'Thanay',
-    description: 'Official portfolio of Thanay Krishna C U (Thanay) – AI & Data Science Engineer and IoT Developer.',
+    name: siteConfig.headline,
+    short_name: siteConfig.shortName,
+    description: siteConfig.description,
     start_url: '/',
     display: 'standalone',
     background_color: '#090d16',

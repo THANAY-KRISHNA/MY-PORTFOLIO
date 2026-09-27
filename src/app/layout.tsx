@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { siteConfig, getPersonJsonLd } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: 'swap' });
 const poppins = Poppins({ 
@@ -20,48 +21,18 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://thanay.vercel.app";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Thanay Krishna C U (Thanay) | AI & Data Science Engineer Portfolio",
-    template: "%s | Thanay Krishna C U"
+    default: siteConfig.headline,
+    template: siteConfig.titleTemplate,
   },
-  description: "Official portfolio of Thanay Krishna C U (Thanay) – BTech Computer Science & Data Science Engineer, AI & IoT Developer specializing in intelligent systems, machine learning, and hardware-software integration.",
-  applicationName: "Thanay Krishna C U Portfolio",
-  keywords: [
-    "THANAY KRISHNA C U",
-    "Thanay Krishna C U",
-    "THANAY",
-    "Thanay",
-    "thanay",
-    "thanay krishna c u",
-    "Thanay Krishna",
-    "thanay krishna",
-    "Thanay C U",
-    "thanay cu",
-    "Thanay Portfolio",
-    "Thanay Krishna Portfolio",
-    "Thanay Website",
-    "Thanay Krishna Website",
-    "Thanay Engineer",
-    "Thanay Data Science",
-    "Thanay AI Developer",
-    "Thanay IoT",
-    "Thanay IES College of Engineering",
-    "Thanay Krishna Thrissur",
-    "Thanay Kerala",
-    "AI Engineer Thrissur",
-    "Data Science Engineer Kerala",
-    "Machine Learning Engineer",
-    "Full Stack Developer",
-    "Python Developer",
-    "Next.js Developer"
-  ],
-  authors: [{ name: "Thanay Krishna C U", url: siteUrl }],
-  creator: "Thanay Krishna C U",
-  publisher: "Thanay Krishna C U",
+  description: siteConfig.description,
+  applicationName: siteConfig.headline,
+  keywords: siteConfig.keywords,
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
   formatDetection: {
     email: false,
     address: false,
@@ -79,110 +50,40 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Thanay Krishna C U (Thanay) | AI & Data Science Engineer Portfolio",
-    description: "Official portfolio of Thanay Krishna C U (Thanay). Building AI & IoT solutions that create real-world impact. Explore projects, skills, achievements, and experience.",
-    url: siteUrl,
-    siteName: "Thanay Krishna C U (Thanay)",
+    title: siteConfig.headline,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
     locale: "en_US",
-    type: "profile",
+    type: "website",
+    images: [
+      {
+        url: `${siteConfig.url}/opengraph-image`,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.headline,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Thanay Krishna C U (Thanay) | AI & Data Science Engineer",
-    description: "Official portfolio of Thanay Krishna C U (Thanay) – Building AI & IoT solutions that create real-world impact.",
-    creator: "@ThanayKrishna",
+    title: siteConfig.headline,
+    description: siteConfig.description,
+    images: [`${siteConfig.url}/opengraph-image`],
+    creator: siteConfig.social.twitterHandle,
   },
   alternates: {
-    canonical: siteUrl,
+    canonical: siteConfig.url,
   },
   icons: {
     icon: "/favicon.ico",
   },
-  verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
-  },
+  ...(siteConfig.googleVerification ? {
+    verification: {
+      google: siteConfig.googleVerification,
+    },
+  } : {}),
   category: "technology",
-};
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": `${siteUrl}/#person`,
-      "name": "Thanay Krishna C U",
-      "alternateName": [
-        "Thanay",
-        "THANAY",
-        "thanay",
-        "Thanay Krishna",
-        "THANAY KRISHNA C U",
-        "Thanay C U",
-        "thanay krishna"
-      ],
-      "givenName": "Thanay",
-      "additionalName": "Krishna",
-      "familyName": "C U",
-      "jobTitle": "AI & Data Science Engineer",
-      "description": "Thanay Krishna C U (Thanay) is an AI & Data Science Engineer, IoT Developer, and BTech student in Computer Science with Data Science Engineering at IES College of Engineering, Thrissur.",
-      "url": siteUrl,
-      "sameAs": [
-        "https://github.com/THANAY-KRISHNA",
-        "https://www.linkedin.com/in/thanay-krishna-c-u-a1b67831b/"
-      ],
-      "email": "mailto:thanaykrishna2255@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Thrissur",
-        "addressRegion": "Kerala",
-        "addressCountry": "India"
-      },
-      "alumniOf": {
-        "@type": "EducationalOrganization",
-        "name": "IES College of Engineering, Thrissur"
-      },
-      "knowsAbout": [
-        "Artificial Intelligence",
-        "Data Science",
-        "Internet of Things (IoT)",
-        "Machine Learning",
-        "Full Stack Web Development",
-        "Python",
-        "React",
-        "Next.js"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": `${siteUrl}/#website`,
-      "url": siteUrl,
-      "name": "Thanay Krishna C U Portfolio",
-      "alternateName": [
-        "Thanay Portfolio",
-        "Thanay Krishna Website",
-        "THANAY KRISHNA C U",
-        "Thanay",
-        "THANAY"
-      ],
-      "description": "Official website and portfolio of Thanay Krishna C U (Thanay).",
-      "publisher": {
-        "@id": `${siteUrl}/#person`
-      },
-      "inLanguage": "en-US"
-    },
-    {
-      "@type": "ProfilePage",
-      "@id": `${siteUrl}/#profilepage`,
-      "url": siteUrl,
-      "name": "Thanay Krishna C U (Thanay) - Profile & Portfolio",
-      "isPartOf": {
-        "@id": `${siteUrl}/#website`
-      },
-      "mainEntity": {
-        "@id": `${siteUrl}/#person`
-      }
-    }
-  ]
 };
 
 export default function RootLayout({
@@ -190,12 +91,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = getPersonJsonLd();
+  const jsonLdString = JSON.stringify(jsonLd).replace(/</g, '\\u003c');
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: jsonLdString }}
         />
       </head>
       <body className={`${inter.variable} ${poppins.variable} antialiased`} suppressHydrationWarning>

@@ -16,15 +16,16 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     // Check local storage or system preference on mount
-    const savedTheme = localStorage.getItem('portfolio-theme') as Theme;
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.documentElement.setAttribute('data-theme', savedTheme);
-    } else {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setTheme(prefersDark ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+    const savedTheme = localStorage.getItem('portfolio-theme') as Theme | null;
+    let initialTheme: Theme = 'dark';
+    if (savedTheme === 'light' || savedTheme === 'dark') {
+      initialTheme = savedTheme;
+    } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+      initialTheme = 'light';
     }
+    document.documentElement.setAttribute('data-theme', initialTheme);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setTheme(initialTheme);
   }, []);
 
   const toggleTheme = () => {

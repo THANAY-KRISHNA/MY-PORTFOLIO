@@ -43,6 +43,7 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        aria-label="Main navigation"
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled ? 'py-3' : 'py-5'
         }`}
@@ -53,7 +54,7 @@ export default function Navbar() {
           }`}>
             
             {/* Logo area */}
-            <a href="#home" onClick={(e) => handleScrollTo(e, '#home')} className="flex items-center gap-2 group">
+            <a href="#home" onClick={(e) => handleScrollTo(e, '#home')} className="flex items-center gap-2 group" aria-label="Thanay Krishna C U - Home">
               <span className="font-heading font-bold text-xl tracking-tight transition-transform group-hover:scale-105">
                 Thanay Krishna C U
               </span>
@@ -83,6 +84,8 @@ export default function Navbar() {
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-1 focus:outline-none"
+                aria-label="Toggle navigation menu"
+                aria-expanded={mobileMenuOpen}
               >
                 {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>

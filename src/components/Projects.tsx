@@ -79,10 +79,18 @@ export default function Projects() {
                 </div>
 
                 <div className="flex items-center justify-between pt-4 border-t border-[var(--border-color)]">
-                  <a href={project.github} className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors flex items-center gap-2 text-sm font-medium">
+                  <a 
+                    href={project.github} 
+                    aria-label={`View source code for ${project.title}`}
+                    className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors flex items-center gap-2 text-sm font-medium"
+                  >
                     <Github size={18} /> Code
                   </a>
-                  <a href={project.link} className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors flex items-center gap-2 text-sm font-medium">
+                  <a 
+                    href={project.link} 
+                    aria-label={`View demo for ${project.title}`}
+                    className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors flex items-center gap-2 text-sm font-medium"
+                  >
                     View Demo <ExternalLink size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </a>
                 </div>
