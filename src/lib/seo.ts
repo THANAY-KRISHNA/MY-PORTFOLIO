@@ -67,7 +67,7 @@ export const siteConfig = {
   googleVerification:
     process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ||
     process.env.GOOGLE_SITE_VERIFICATION ||
-    undefined,
+    'ZW361SYeC9qaNjvn9U3VQiUf0dazNHX-nBaxfcxOXKc',
 };
 
 export function getPersonJsonLd() {
