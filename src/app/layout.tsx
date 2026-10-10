@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteConfig.headline,
     description: siteConfig.description,
-    url: siteConfig.url,
+    url: siteConfig.canonicalUrl,
     siteName: siteConfig.name,
     locale: "en_US",
     type: "website",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     creator: siteConfig.social.twitterHandle,
   },
   alternates: {
-    canonical: siteConfig.url,
+    canonical: siteConfig.canonicalUrl,
   },
   icons: {
     icon: "/favicon.ico",

@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-export const alt = 'Thanay Krishna C U | Data Science Engineer & Developer';
+export const alt = 'Thanay Krishna C U | AI, Data Science & Software Development';
 export const size = {
   width: 1200,
   height: 630,
@@ -98,7 +98,7 @@ export default async function Image() {
             marginBottom: '40px',
           }}
         >
-          Data Science Engineer & Developer
+          AI, Data Science & Software Development
         </div>
 
         {/* Tags */}
@@ -109,7 +109,7 @@ export default async function Image() {
             alignItems: 'center',
           }}
         >
-          {['Data Science', 'Artificial Intelligence', 'IoT Systems', 'Next.js'].map((tag) => (
+          {['Artificial Intelligence', 'Data Science', 'Software Development', 'Next.js'].map((tag) => (
             <div
               key={tag}
               style={{

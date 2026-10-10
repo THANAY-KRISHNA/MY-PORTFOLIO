@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, ChevronDown, Download } from 'lucide-react';
+import { ArrowRight, ChevronDown, Github, Linkedin } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const sentence = "Building AI & IoT solutions that create real-world impact.";
@@ -73,7 +73,7 @@ export default function Hero() {
         >
           <h2 className="text-xl md:text-3xl font-medium text-[var(--text-primary)] relative">
             <span className="sr-only">{sentence}</span>
-            <span aria-hidden="true">{displayText}</span>
+            <span aria-hidden="true">{displayText || sentence}</span>
           </h2>
         </motion.div>
 
@@ -81,9 +81,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-          className="max-w-3xl text-sm md:text-base lg:text-lg text-[var(--text-secondary)] mb-10 leading-relaxed"
+          className="max-w-3xl text-sm md:text-base lg:text-lg text-[var(--text-secondary)] mb-8 leading-relaxed"
         >
-          BTech student in Computer Science with Data Science Engineering at IES College of Engineering, Thrissur, focused on building intelligent systems and scalable technology solutions.
+          Computer Science and Data Science student at IES College of Engineering, Thrissur. Building AI-powered applications, developer tools, and innovative software projects.
         </motion.p>
 
         <motion.div 
@@ -99,6 +99,34 @@ export default function Hero() {
           
           <a href="#contact" className="group px-8 py-3.5 bg-transparent text-[var(--text-primary)] border border-[var(--border-color)] hover:border-[var(--accent-color)] rounded-lg font-semibold transition-all focus:outline-none flex items-center gap-2 hover:-translate-y-1 bg-[var(--bg-surface)] glass-panel">
             <span>Contact Me</span>
+          </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0, ease: "easeOut" }}
+          className="flex flex-wrap items-center justify-center gap-4 mt-8 text-sm"
+        >
+          <a
+            href="https://github.com/THANAY-KRISHNA"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Thanay Krishna C U on GitHub"
+            className="inline-flex items-center gap-2 text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors font-medium px-4 py-2 rounded-full border border-[var(--border-color)] bg-[var(--bg-surface)] hover:border-[var(--accent-color)] glass-panel"
+          >
+            <Github size={16} />
+            <span>GitHub: THANAY-KRISHNA</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/thanay-krishna-c-u-a1b67831b"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Thanay Krishna C U on LinkedIn"
+            className="inline-flex items-center gap-2 text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors font-medium px-4 py-2 rounded-full border border-[var(--border-color)] bg-[var(--bg-surface)] hover:border-[var(--highlight-color)] glass-panel"
+          >
+            <Linkedin size={16} />
+            <span>LinkedIn: Thanay Krishna C U</span>
           </a>
         </motion.div>
       </div>

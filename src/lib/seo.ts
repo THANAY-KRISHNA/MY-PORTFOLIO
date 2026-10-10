@@ -9,30 +9,21 @@ function getBaseUrl(): string {
     return process.env.NEXT_PUBLIC_SITE_URL.trim().replace(/\/+$/, '');
   }
 
-  // 2. Vercel production deployment URL
-  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
-    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL.trim().replace(/\/+$/, '')}`;
-  }
-
-  // 3. Vercel deployment URL
-  if (process.env.VERCEL_URL) {
-    return `https://${process.env.VERCEL_URL.trim().replace(/\/+$/, '')}`;
-  }
-
-  // 4. Default fallback domain
+  // 2. Default canonical production domain
   return 'https://thanay.vercel.app';
 }
 
 export const siteConfig = {
   name: 'Thanay Krishna C U',
   shortName: 'Thanay Krishna',
-  headline: 'Thanay Krishna C U | Data Science Engineer & Developer',
+  headline: 'Thanay Krishna C U | AI, Data Science & Software Development',
   titleTemplate: '%s | Thanay Krishna C U',
   description:
-    'Thanay Krishna C U — B.Tech Computer Science and Data Science student, developer and technology enthusiast from Kerala, India. Building AI & IoT solutions.',
+    'Official portfolio of Thanay Krishna C U, a Computer Science and Data Science student building AI-powered applications, developer tools, and innovative software projects.',
   url: getBaseUrl(),
-  jobTitle: 'Data Science Engineer & Developer',
-  profession: 'B.Tech Computer Science and Data Science student, developer, and technology enthusiast.',
+  canonicalUrl: 'https://thanay.vercel.app/',
+  jobTitle: 'Computer Science and Data Science Student & Developer',
+  profession: 'Computer Science and Data Science student, AI developer, and software builder.',
   location: {
     locality: 'Thrissur',
     region: 'Kerala',
@@ -43,25 +34,32 @@ export const siteConfig = {
   email: 'thanaykrishna2255@gmail.com',
   social: {
     github: 'https://github.com/THANAY-KRISHNA',
-    linkedin: 'https://www.linkedin.com/in/thanay-krishna-c-u-a1b67831b/',
+    linkedin: 'https://www.linkedin.com/in/thanay-krishna-c-u-a1b67831b',
     twitterHandle: '@ThanayKrishna',
   },
   keywords: [
-    'Thanay Krishna CU',
     'Thanay Krishna C U',
     'Thanay Krishna',
+    'Thanay Krishna GitHub',
+    'Thanay Krishna AI developer',
+    'Thanay Krishna Data Science',
+    'Thanay Krishna CU',
     'Thanay CU',
     'Thanay C U',
     'Thanay',
+    'AI Developer',
+    'Data Science Student',
     'Data Science Engineer',
     'Data Science Developer',
-    'AI Developer',
-    'IoT Developer',
-    'Machine Learning Engineer',
+    'Software Engineer',
+    'Software Development',
     'Computer Science Student Kerala',
     'IES College of Engineering',
     'Thrissur',
     'Kerala India',
+    'BloomWatch Pro',
+    'MEDOS',
+    'Patchwise',
     'Personal Portfolio',
   ],
   googleVerification:
@@ -80,23 +78,26 @@ export function getPersonJsonLd() {
         '@id': `${url}/#person`,
         name: siteConfig.name,
         alternateName: [
-          'Thanay Krishna CU',
-          'Thanay Krishna C U',
           'Thanay Krishna',
+          'Thanay Krishna CU',
           'Thanay CU',
           'Thanay C U',
           'Thanay',
           'THANAY KRISHNA CU',
           'THANAY KRISHNA C U',
+          'THANAY-KRISHNA',
         ],
         givenName: 'Thanay',
         additionalName: 'Krishna',
         familyName: 'C U',
-        url: url,
+        url: `${url}/`,
         image: `${url}/opengraph-image`,
         jobTitle: siteConfig.jobTitle,
         description: siteConfig.description,
-        sameAs: [siteConfig.social.github, siteConfig.social.linkedin],
+        sameAs: [
+          siteConfig.social.github,
+          siteConfig.social.linkedin,
+        ],
         email: `mailto:${siteConfig.email}`,
         address: {
           '@type': 'PostalAddress',
@@ -112,6 +113,8 @@ export function getPersonJsonLd() {
           'Artificial Intelligence',
           'Data Science',
           'Machine Learning',
+          'Software Development',
+          'Developer Tooling',
           'Internet of Things (IoT)',
           'Embedded Systems',
           'Python',
@@ -123,13 +126,11 @@ export function getPersonJsonLd() {
       {
         '@type': 'WebSite',
         '@id': `${url}/#website`,
-        url: url,
+        url: `${url}/`,
         name: siteConfig.headline,
         alternateName: [
-          'Thanay Krishna CU Portfolio',
           'Thanay Krishna C U Portfolio',
           'Thanay Krishna Portfolio',
-          'Thanay Portfolio',
           'Thanay Krishna CU Website',
           'Thanay Krishna Website',
         ],
@@ -142,7 +143,7 @@ export function getPersonJsonLd() {
       {
         '@type': 'ProfilePage',
         '@id': `${url}/#profilepage`,
-        url: url,
+        url: `${url}/`,
         name: siteConfig.headline,
         isPartOf: {
           '@id': `${url}/#website`,

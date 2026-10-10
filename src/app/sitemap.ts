@@ -4,9 +4,9 @@ import { siteConfig } from '@/lib/seo';
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: siteConfig.url,
+      url: siteConfig.canonicalUrl,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: 1.0,
     },
   ];

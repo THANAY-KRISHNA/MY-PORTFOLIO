@@ -26,6 +26,7 @@ export default function Contact() {
           {/* Contact Info Cards */}
           <motion.a
             href="mailto:thanaykrishna2255@gmail.com"
+            aria-label="Send email to Thanay Krishna C U"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -42,9 +43,10 @@ export default function Contact() {
           </motion.a>
 
           <motion.a
-            href="https://www.linkedin.com/in/thanay-krishna-c-u-a1b67831b/"
+            href="https://www.linkedin.com/in/thanay-krishna-c-u-a1b67831b"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit Thanay Krishna C U profile on LinkedIn"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -64,6 +66,7 @@ export default function Contact() {
             href="https://github.com/THANAY-KRISHNA"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit Thanay Krishna C U profile on GitHub"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

@@ -17,7 +17,7 @@ export default function Footer() {
             Thanay Krishna C U
           </span>
           <p className="text-sm text-[var(--text-secondary)]">
-            Data Science Engineer &amp; Developer • Kerala, India
+            Computer Science &amp; Data Science Student • Developer
           </p>
         </div>
 

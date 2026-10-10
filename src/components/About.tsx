@@ -33,7 +33,7 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="mb-16 text-center"
         >
-          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">About <span className="text-gradient">Me</span></h2>
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">About <span className="text-gradient">Thanay Krishna C U</span></h2>
           <div className="w-20 h-1 bg-[var(--highlight-color)] mx-auto rounded-full"></div>
         </motion.div>
 
@@ -50,13 +50,13 @@ export default function About() {
               I am <strong className="text-[var(--text-primary)] font-medium">Thanay Krishna C U</strong>, currently pursuing a BTech in <strong className="text-[var(--text-primary)] font-medium">Computer Science with Data Science Engineering</strong> at IES College of Engineering, Thrissur.
             </motion.p>
             <motion.p variants={itemVariants}>
-              I am passionate about building impactful solutions at the intersection of <strong className="text-[var(--text-primary)] font-medium">Artificial Intelligence, IoT, and Data Science</strong>. I enjoy transforming ideas into real-world systems that solve meaningful problems.
+              I specialize in developing intelligent systems at the intersection of <strong className="text-[var(--text-primary)] font-medium">Artificial Intelligence, Data Science, and Software Development</strong>. My work spans predictive machine learning, environmental intelligence, clinical monitoring concepts, and developer tooling.
             </motion.p>
             <motion.p variants={itemVariants}>
-              I actively contribute to multidisciplinary initiatives where I take on roles in strategy, development, and community engagement. My experience includes working on IoT systems, exploring intelligent automation, and participating in competitive hackathons that challenge my ability to innovate and think critically.
+              Beyond core coursework, I actively lead technical initiatives and participate in competitive hackathons. My highlights include earning <strong className="text-[var(--text-primary)] font-medium">NASA Space Apps Global Nominee</strong> recognition for BloomWatch Pro, winning national hackathons such as <strong className="text-[var(--text-primary)] font-medium">SINOVA&apos;26</strong>, and developing repository tools like Patchwise.
             </motion.p>
             <motion.p variants={itemVariants}>
-              Driven by curiosity, continuous learning, and the ambition to become a Data Science Engineer and technology entrepreneur, I focus on building solutions that are both technically strong and valuable in real-world applications.
+              Driven by curiosity and a commitment to high-quality engineering, I focus on turning research ideas into reliable, user-centered software applications.
             </motion.p>
           </motion.div>
 

@@ -7,17 +7,17 @@ const skillCategories = [
   {
     title: 'Programming',
     icon: <Code2 size={24} />,
-    skills: ['C', 'Python', 'TypeScript', 'C++']
+    skills: ['Python', 'TypeScript', 'C', 'C++']
   },
   {
     title: 'Technologies',
     icon: <Cpu size={24} />,
-    skills: ['IoT Systems', 'Embedded Systems', 'Node.js', 'React']
+    skills: ['Next.js', 'React', 'Node.js', 'IoT Systems', 'Embedded Systems']
   },
   {
     title: 'Domains',
     icon: <BrainCircuit size={24} />,
-    skills: ['Artificial Intelligence', 'Data Science', 'Robotics', 'Automation']
+    skills: ['Artificial Intelligence', 'Data Science', 'Machine Learning', 'Software Engineering']
   }
 ];
 
