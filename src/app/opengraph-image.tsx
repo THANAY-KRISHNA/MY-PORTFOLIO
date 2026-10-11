@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-export const alt = 'Thanay Krishna C U | AI, Data Science & Software Development';
+export const alt = 'Thanay Krishna C U | Data Science Engineer & Developer';
 export const size = {
   width: 1200,
   height: 630,
@@ -98,7 +98,7 @@ export default async function Image() {
             marginBottom: '40px',
           }}
         >
-          AI, Data Science & Software Development
+          Data Science Engineer & Developer
         </div>
 
         {/* Tags */}

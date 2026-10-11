@@ -16,14 +16,14 @@ function getBaseUrl(): string {
 export const siteConfig = {
   name: 'Thanay Krishna C U',
   shortName: 'Thanay Krishna',
-  headline: 'Thanay Krishna C U | AI, Data Science & Software Development',
+  headline: 'Thanay Krishna C U | Data Science Engineer & Developer',
   titleTemplate: '%s | Thanay Krishna C U',
   description:
-    'Official portfolio of Thanay Krishna C U, a Computer Science and Data Science student building AI-powered applications, developer tools, and innovative software projects.',
+    'Portfolio of Thanay Krishna C U — Data Science Engineer & Developer specializing in AI, machine learning, and modern software development.',
   url: getBaseUrl(),
-  canonicalUrl: 'https://thanay.vercel.app/',
-  jobTitle: 'Computer Science and Data Science Student & Developer',
-  profession: 'Computer Science and Data Science student, AI developer, and software builder.',
+  canonicalUrl: 'https://thanay.vercel.app',
+  jobTitle: 'Data Science Engineer & Developer',
+  profession: 'Data Science Engineer and Developer, building AI and modern software solutions.',
   location: {
     locality: 'Thrissur',
     region: 'Kerala',
@@ -126,14 +126,9 @@ export function getPersonJsonLd() {
       {
         '@type': 'WebSite',
         '@id': `${url}/#website`,
-        url: `${url}/`,
-        name: siteConfig.headline,
-        alternateName: [
-          'Thanay Krishna C U Portfolio',
-          'Thanay Krishna Portfolio',
-          'Thanay Krishna CU Website',
-          'Thanay Krishna Website',
-        ],
+        url: `${url}`,
+        name: siteConfig.name,
+        alternateName: siteConfig.shortName,
         description: siteConfig.description,
         publisher: {
           '@id': `${url}/#person`,

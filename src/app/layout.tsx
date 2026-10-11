@@ -22,17 +22,17 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL("https://thanay.vercel.app"),
   title: {
-    default: siteConfig.headline,
-    template: siteConfig.titleTemplate,
+    default: "Thanay Krishna C U | Data Science Engineer & Developer",
+    template: "%s | Thanay Krishna C U",
   },
   description: siteConfig.description,
-  applicationName: siteConfig.headline,
+  applicationName: "Thanay Krishna C U",
   keywords: siteConfig.keywords,
-  authors: [{ name: siteConfig.name, url: siteConfig.url }],
-  creator: siteConfig.name,
-  publisher: siteConfig.name,
+  authors: [{ name: "Thanay Krishna C U", url: "https://thanay.vercel.app" }],
+  creator: "Thanay Krishna C U",
+  publisher: "Thanay Krishna C U",
   formatDetection: {
     email: false,
     address: false,
@@ -50,33 +50,37 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: siteConfig.headline,
+    title: "Thanay Krishna C U | Data Science Engineer & Developer",
     description: siteConfig.description,
-    url: siteConfig.canonicalUrl,
-    siteName: siteConfig.name,
+    url: "https://thanay.vercel.app",
+    siteName: "Thanay Krishna C U",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: `${siteConfig.url}/opengraph-image`,
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: siteConfig.headline,
+        alt: "Thanay Krishna C U | Data Science Engineer & Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.headline,
+    title: "Thanay Krishna C U | Data Science Engineer & Developer",
     description: siteConfig.description,
-    images: [`${siteConfig.url}/opengraph-image`],
+    images: ["/opengraph-image"],
     creator: siteConfig.social.twitterHandle,
   },
   alternates: {
-    canonical: siteConfig.canonicalUrl,
+    canonical: "https://thanay.vercel.app",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   verification: {
     google: "ZW361SYeC9qaNjvn9U3VQiUf0dazNHX-nBaxfcxOXKc",
