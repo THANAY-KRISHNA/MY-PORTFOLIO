@@ -28,7 +28,11 @@ export const metadata: Metadata = {
     template: "%s | Thanay Krishna C U",
   },
   description: siteConfig.description,
-  applicationName: "Thanay Krishna C U",
+  applicationName: siteConfig.siteName,
+  appleWebApp: {
+    title: siteConfig.siteName,
+    statusBarStyle: "black-translucent",
+  },
   keywords: siteConfig.keywords,
   authors: [{ name: "Thanay Krishna C U", url: "https://thanay.vercel.app" }],
   creator: "Thanay Krishna C U",
@@ -53,7 +57,7 @@ export const metadata: Metadata = {
     title: "Thanay Krishna C U | Data Science Engineer & Developer",
     description: siteConfig.description,
     url: "https://thanay.vercel.app",
-    siteName: "Thanay Krishna C U",
+    siteName: siteConfig.siteName,
     locale: "en_US",
     type: "website",
     images: [

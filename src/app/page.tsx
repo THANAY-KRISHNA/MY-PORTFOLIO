@@ -11,14 +11,6 @@ import Achievements from '@/components/Achievements';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
-const websiteJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'Thanay Krishna C U',
-  alternateName: 'Thanay Krishna',
-  url: 'https://thanay.vercel.app',
-};
-
 export default function Home() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -29,14 +21,6 @@ export default function Home() {
 
   return (
     <div className="relative bg-[var(--bg-primary)] min-h-screen selection:bg-[var(--highlight-color)] selection:text-black flex flex-col">
-      {/* WebSite JSON-LD Structured Data for Search Engines */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteJsonLd).replace(/</g, '\\u003c'),
-        }}
-      />
-
       {/* Dynamic Scroll Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-[var(--accent-color)] z-[100] origin-left"

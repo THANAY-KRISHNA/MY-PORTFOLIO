@@ -15,6 +15,7 @@ function getBaseUrl(): string {
 
 export const siteConfig = {
   name: 'Thanay Krishna C U',
+  siteName: 'THANAY KRISHNA C U',
   shortName: 'Thanay Krishna',
   headline: 'Thanay Krishna C U | Data Science Engineer & Developer',
   titleTemplate: '%s | Thanay Krishna C U',
@@ -126,9 +127,15 @@ export function getPersonJsonLd() {
       {
         '@type': 'WebSite',
         '@id': `${url}/#website`,
-        url: `${url}`,
-        name: siteConfig.name,
-        alternateName: siteConfig.shortName,
+        url: `${url}/`,
+        name: siteConfig.siteName,
+        alternateName: [
+          'Thanay Krishna C U',
+          'Thanay Krishna',
+          'THANAY KRISHNA',
+          'Thanay',
+          'Thanay Krishna Portfolio',
+        ],
         description: siteConfig.description,
         publisher: {
           '@id': `${url}/#person`,

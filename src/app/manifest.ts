@@ -3,8 +3,8 @@ import { siteConfig } from '@/lib/seo';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: siteConfig.name,
-    short_name: siteConfig.shortName,
+    name: siteConfig.siteName,
+    short_name: siteConfig.siteName,
     description: siteConfig.description,
     start_url: '/',
     display: 'standalone',
