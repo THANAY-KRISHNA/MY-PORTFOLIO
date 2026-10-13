@@ -19,7 +19,7 @@ const projects = [
     subtitle: 'Medical Early Detection & Observation System',
     description: 'A clinical monitoring and decision-support concept designed for visualizing patient deterioration risks, continuous vital-sign tracking, and assisting healthcare decision-making through explainable risk assessments.',
     tags: ['Clinical AI', 'Data Science', 'Python', 'Decision Support'],
-    award: 'Clinical Concept',
+    award: 'AI Conclave 2026 Finalist',
     github: 'https://github.com/THANAY-KRISHNA',
     link: 'https://github.com/THANAY-KRISHNA',
     linkLabel: 'Explore Concept'
