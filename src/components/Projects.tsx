@@ -15,6 +15,16 @@ const projects = [
     linkLabel: 'Explore Project'
   },
   {
+    title: 'IES–IEDC Platform',
+    subtitle: 'Innovation & Entrepreneurship Digital Platform',
+    description: 'Official web platform for the IES Innovation and Entrepreneurship Development Cell (IEDC). Engineered to establish a dedicated online presence for college innovators, showcase incubation programs, hackathons, and student ventures with high-performance responsive UI/UX.',
+    tags: ['Technical Leadership', 'Web Development', 'Frontend Development', 'UI/UX', 'Institutional Website'],
+    award: 'Live Institutional Website',
+    github: 'https://github.com/THANAY-KRISHNA',
+    link: 'https://ies-iedc.vercel.app/',
+    linkLabel: 'Visit Website'
+  },
+  {
     title: 'MEDOS',
     subtitle: 'Medical Early Detection & Observation System',
     description: 'A clinical monitoring and decision-support concept designed for visualizing patient deterioration risks, continuous vital-sign tracking, and assisting healthcare decision-making through explainable risk assessments.',
@@ -49,12 +59,9 @@ export default function Projects() {
         >
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">Featured <span className="text-gradient">Projects</span></h2>
           <div className="w-20 h-1 bg-[var(--accent-color)] mx-auto rounded-full"></div>
-          <p className="mt-4 text-sm md:text-base text-[var(--text-secondary)] max-w-2xl mx-auto">
-            Practical AI applications, clinical monitoring concepts, and developer tooling built by Thanay Krishna C U.
-          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {projects.map((project, idx) => (
             <motion.div
               key={project.title}
